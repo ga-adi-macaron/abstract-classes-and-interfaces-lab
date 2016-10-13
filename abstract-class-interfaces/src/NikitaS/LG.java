@@ -3,48 +3,50 @@ package NikitaS;
 /**
  * Created by NikitaShuvalov on 10/13/16.
  */
-public class Sony extends Remote implements Universal, Rechargable, WaterProof {
+public class LG extends Remote implements Universal, WaterProof, Rechargable {
     private String mLanguage;
-    public Sony(boolean needsBatteries, boolean supportsUsb) {
+
+    public LG(boolean needsBatteries, boolean supportsUsb) {
         super(needsBatteries, supportsUsb);
-        mLanguage="spanish";
+        mLanguage="german";
     }
 
     @Override
     public void supportsBrand() {
-        System.out.println("Sony-exclusive support");
+        System.out.println("Supports LG brand TVs and refrigerators");
     }
 
     @Override
     public boolean isWaterProof() {
-        return true;
-    }
-
-    @Override
-    public boolean isRechargable() {
         return false;
     }
 
     @Override
+    public boolean isRechargable() {
+        return true;
+    }
+
+    @Override
     public void channelUp() {
-        System.out.println("Canal aumentado");
+        System.out.println("Fernsehprogramm Zuwachs (+)");
     }
 
     @Override
     public void channelDown() {
-        System.out.println("Canal disminuido");
+        System.out.println("Fersehprogramm Verringern (-)");
     }
 
     @Override
     public void volumeUp() {
-        System.out.println("Volumen aumentado");
+        System.out.println("Lautstarke Zuwachs");
     }
 
     @Override
     public void volumeDown() {
-        System.out.println("Volumen disminuido");
+        System.out.println("Lautstarke Verringern");
     }
-    public String getLanguage(){
+
+    public String getLanguage() {
         return mLanguage;
     }
 
@@ -52,6 +54,7 @@ public class Sony extends Remote implements Universal, Rechargable, WaterProof {
         mLanguage = language;
     }
 
+    @Override
     public void printAllInfo(){
         String[] info = new String[4];
         System.out.println("Current language: "+getLanguage());

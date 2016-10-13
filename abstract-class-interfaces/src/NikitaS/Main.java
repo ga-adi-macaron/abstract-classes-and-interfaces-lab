@@ -11,6 +11,9 @@ public class Main {
         allRemotes.add(new HTC(false, true));
         allRemotes.add(new Panasonic(true, false));
         allRemotes.add(new Samsung(false, true));
+        allRemotes.add(new Sony(true, false));
+        allRemotes.add(new SonicScrewdriver(false, false));
+        allRemotes.add(new LG(false, true));
 
         int i = 0;
         for (Remote remote:allRemotes) {
