@@ -11,10 +11,16 @@ public class Main {
         Remote lg = new Lg(true, false);
         Remote samsung = new Samsung(true, true);
         Remote sony = new Sony(false, true);
+        Remote arcelik = new Arcelik(false, false);
+        Remote vestel = new Vestel(false, true);
+        Remote beko = new Beko(true, true);
 
         remote.add(lg);
         remote.add(samsung);
         remote.add(sony);
+        remote.add(arcelik);
+        remote.add(vestel);
+        remote.add(beko);
 
         for (int i = 0; i < remote.size(); i++) {
             remote.get(i).numberButtonPressed(i);
