@@ -32,10 +32,11 @@ public abstract class Remote {
     public abstract void channelDown();
     public abstract void volumeUp();
     public abstract void volumeDown();
-    public String powerButtonPressed(){
+    public void powerButtonPressed(){
         System.out.println("The power button was pressed.");
     }
     public void numberButtonPressed(int numButt){
-        System.out.println(String.format("Changing channel to %i",numButt));
+        System.out.println(String.format("Changing channel to %s",numButt));
     }
+    public abstract void printAllInfo();
 }

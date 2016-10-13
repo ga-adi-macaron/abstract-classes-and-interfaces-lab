@@ -1,37 +1,34 @@
 package NikitaS;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) {
+        List<Remote> allRemotes = new ArrayList<>();
 
+        allRemotes.add(new HTC(false, true));
+        allRemotes.add(new Panasonic(true, false));
+        allRemotes.add(new Samsung(false, true));
+
+        int i = 0;
+        for (Remote remote:allRemotes) {
+            System.out.println("\n");
+            remote.printAllInfo();
+            System.out.println("\n");
+            remote.channelUp();
+            remote.channelDown();
+            remote.volumeUp();
+            remote.volumeDown();
+            i++;
+            remote.numberButtonPressed(i);
+            System.out.println("---------------------");
+        }
     }
 }
 
-//
-//    Abstract Class
-//
 
-//        Interfaces
-//
-//        Create an interface class named WaterProof.
-//        Inside this class, declare a method isWaterProof. What do you think it should return?
-//
-//        Create an interface class named Rechargeable.
-//
-//        Inside this class, declare a method isRechargeable. What do you think it should return?
-//
-//        Create an interface class named Universal.
-//
-//        Inside this class, declare a method supportsBrands. It should return nothing.
-//        Concrete Class
-//
-//        Create three concrete classes that extends the abstract class Remote, name the concrete class one of your favorite brands. (Samsung, LG, Panasonic, Sony, etc.)
-//
-//        Implement the methods you declared in the Remote abstract class which are required to be implemented in each concrete class.
-//
-//        Make sure the implementations output something different for each concrete class.
-//
-//        Implement the WaterProof, Rechargeable, and Universal interfaces.
 //
 //        Implement the methods defined by those interfaces. You can choose what to do, but at the minimum print something out to the terminal.
 //
